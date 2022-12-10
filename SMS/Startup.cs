@@ -34,7 +34,7 @@ namespace SMS
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SMS", Version = "v1" });
             });
 
-            services.AddScoped<IStudentRepository, StudentServiceHardCoded>();
+            services.AddScoped<IStudentRepository, StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
