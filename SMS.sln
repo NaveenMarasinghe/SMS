@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS", "SMS\SMS.csproj", "{CA57CD97-290A-4DA2-B546-AE7ED296F5AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Models", "SMS.Models\SMS.Models.csproj", "{5608240C-980A-44E4-8083-9CC5A51D7B29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Services", "SMS.Services\SMS.Services.csproj", "{8A2E7560-7F25-4328-BDEA-00DD4BCF8B4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CA57CD97-290A-4DA2-B546-AE7ED296F5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA57CD97-290A-4DA2-B546-AE7ED296F5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA57CD97-290A-4DA2-B546-AE7ED296F5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5608240C-980A-44E4-8083-9CC5A51D7B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5608240C-980A-44E4-8083-9CC5A51D7B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5608240C-980A-44E4-8083-9CC5A51D7B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5608240C-980A-44E4-8083-9CC5A51D7B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A2E7560-7F25-4328-BDEA-00DD4BCF8B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2E7560-7F25-4328-BDEA-00DD4BCF8B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A2E7560-7F25-4328-BDEA-00DD4BCF8B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2E7560-7F25-4328-BDEA-00DD4BCF8B4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
