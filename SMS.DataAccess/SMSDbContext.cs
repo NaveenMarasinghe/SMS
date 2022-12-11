@@ -13,6 +13,7 @@ namespace SMS.DataAccess
         public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }    
         public DbSet<Grade> Grades { get; set; }
+        public DbSet<SubjectEnroll> SubjectEnroll { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -52,6 +53,15 @@ namespace SMS.DataAccess
                 new Grade {Id = 8, Name = "A-", Min_mark = 70 , Max_mark = 79},
                 new Grade {Id = 9, Name = "A", Min_mark = 80 , Max_mark = 89},
                 new Grade {Id = 10, Name = "A+", Min_mark = 90 , Max_mark = 100}
+
+            });
+
+            modelBuilder.Entity<SubjectEnroll>().HasData(new SubjectEnroll[]
+            {
+                new SubjectEnroll {Id = 1, StudentId= 1, SubjectId= 1},
+                new SubjectEnroll {Id = 2, StudentId= 1, SubjectId= 2},
+                new SubjectEnroll {Id = 3, StudentId= 1, SubjectId= 3},
+                new SubjectEnroll {Id = 4, StudentId= 2, SubjectId= 1},
 
             });
         }

@@ -16,6 +16,7 @@ namespace SMS.Services.Profiles
             CreateMap<Student, StudentDto>();
             CreateMap<CreateStudentDto, Student>();
             CreateMap<UpdateStudentDto, Student>();
+            CreateMap<CreateSubjectEnrollDto, EnrollSubjectDto>();
         }
     }
 }

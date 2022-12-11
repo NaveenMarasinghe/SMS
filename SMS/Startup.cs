@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SMS.Services.Grades;
 using SMS.Services.Students;
+using SMS.Services.SubjectEnroll;
 using SMS.Services.Subjects;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,7 @@ namespace SMS
             services.AddScoped<IStudentRepository, StudentService>();
             services.AddScoped<IGradeRepository, GradeService>();
             services.AddScoped<ISubjectRepository, SubjectService>();
+            services.AddScoped<ISubjectEnrollRepository, SubjectEnrollService>();
 
         }
 
