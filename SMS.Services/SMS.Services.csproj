@@ -9,4 +9,8 @@
     <ProjectReference Include="..\SMS.Models\SMS.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Subjects\" />
+  </ItemGroup>
+
 </Project>

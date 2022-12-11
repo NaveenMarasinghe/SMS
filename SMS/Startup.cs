@@ -7,7 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using SMS.Services;
+using SMS.Services.Grades;
+using SMS.Services.Students;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,7 @@ namespace SMS
             });
 
             services.AddScoped<IStudentRepository, StudentService>();
+            services.AddScoped<IGradesRepository, GradeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

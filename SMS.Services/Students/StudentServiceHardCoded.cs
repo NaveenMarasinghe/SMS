@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMS.Services
+namespace SMS.Services.Students
 {
     public class StudentServiceHardCoded : IStudentRepository
     {

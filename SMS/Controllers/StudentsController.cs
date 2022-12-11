@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SMS.Services;
+using SMS.Services.Students;
 using System.Linq;
 
 namespace SMS.Controllers
