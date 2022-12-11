@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SMS.Services.Grades;
 using SMS.Services.Students;
+using SMS.Services.Subjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,9 @@ namespace SMS
             });
 
             services.AddScoped<IStudentRepository, StudentService>();
-            services.AddScoped<IGradesRepository, GradeService>();
+            services.AddScoped<IGradeRepository, GradeService>();
+            services.AddScoped<ISubjectRepository, SubjectService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

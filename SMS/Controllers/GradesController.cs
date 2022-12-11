@@ -8,9 +8,9 @@ namespace SMS.Controllers
     [ApiController]
     public class GradesController : ControllerBase
     {
-        private readonly IGradesRepository _gradesService;
+        private readonly IGradeRepository _gradesService;
 
-        public GradesController(IGradesRepository gradesService)
+        public GradesController(IGradeRepository gradesService)
         {
             _gradesService = gradesService;
         }

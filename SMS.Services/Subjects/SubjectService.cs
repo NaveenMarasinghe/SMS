@@ -7,15 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMS.Services.Grades
+namespace SMS.Services.Subjects
 {
-    public class GradeService : IGradeRepository
+    public class SubjectService : ISubjectRepository
     {
         private readonly SMSDbContext _context = new SMSDbContext();
-        public List<Grade> AllGrades()
+        public List<Subject> AllSubjects()
         {
-            return _context.Grades.FromSqlInterpolated($"SELECT * FROM dbo.Grades").ToList();
+            return _context.Subjects.FromSqlInterpolated($"SELECT * FROM dbo.Subjects").ToList();
         }
-
     }
 }

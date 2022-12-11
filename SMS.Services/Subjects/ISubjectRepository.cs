@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMS.Services.Grades
+namespace SMS.Services.Subjects
 {
-    public interface IGradesRepository
+    public interface ISubjectRepository
     {
-        public List<Grade> AllGrades();
+        public List<Subject> AllSubjects();
     }
 }
