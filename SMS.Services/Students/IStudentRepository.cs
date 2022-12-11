@@ -10,5 +10,7 @@ namespace SMS.Services.Students
     public interface IStudentRepository
     {
         public List<Student> AllStudents();
+        public Student GetOneStudent(int id);
+        public Student AddNewStudent(Student student);
     }
 }

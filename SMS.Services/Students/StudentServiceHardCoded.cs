@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SMS.Services.Students
 {
-    public class StudentServiceHardCoded : IStudentRepository
+    public class StudentServiceHardCoded
     {
         public List<Student> AllStudents()
         {
@@ -36,6 +36,20 @@ namespace SMS.Services.Students
             students.Add(student2);
 
             return students;
+        }
+
+        public Student GetOneStudent(int id)
+        {
+            var student = new Student
+            {
+                Id = 2,
+                NameWithInitials = "T.K.Bandara",
+                FirstName = "Kasun",
+                LastName = "Bandara",
+                Email = "kasunbandara@gmail.com",
+                Address = "Dehiwala"
+            };
+            return student;
         }
     }
 }

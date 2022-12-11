@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SMS.Models;
+using SMS.Services.Models;
 using SMS.Services.Students;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SMS.Controllers
@@ -10,22 +15,39 @@ namespace SMS.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly IStudentRepository _studentService;
+        private readonly IMapper _mapper;
 
-        public StudentsController(IStudentRepository repository)
+        public StudentsController(IStudentRepository repository, IMapper mapper)
         {
             _studentService = repository;
+            _mapper = mapper;   
         }
 
-        [HttpGet("{id?}")]
-        public IActionResult GetStudents(int? id) 
+        [HttpGet]
+        public ActionResult<ICollection<StudentDto>> GetStudents() 
         {
-            var studentsData = _studentService.AllStudents();
+            var students = _studentService.AllStudents();
 
-            if (id is null) return Ok(studentsData);
+            var mappedStudents = _mapper.Map<ICollection<StudentDto>>(students);     
 
-            studentsData = studentsData.Where(t =>t.Id == id).ToList();
+            return Ok(mappedStudents);
+        }
 
-            return Ok(studentsData);
+        [HttpGet("{id}")]
+        public IActionResult GetStudent(int id)
+        {
+            var data = _studentService.GetOneStudent(id);
+            return Ok(data);
+        }
+
+        [HttpPost]
+        public ActionResult<StudentDto> AddNewStudent(CreateStudentDto student)
+        {
+            var studentEntity = _mapper.Map<Student>(student);
+            var newStudent = _studentService.AddNewStudent(studentEntity);
+
+            var studentForReturn = _mapper.Map<StudentDto>(newStudent);
+            return studentForReturn;
         }
     }
 }

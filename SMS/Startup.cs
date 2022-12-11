@@ -36,6 +36,8 @@ namespace SMS
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SMS", Version = "v1" });
             });
 
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddScoped<IStudentRepository, StudentService>();
             services.AddScoped<IGradeRepository, GradeService>();
             services.AddScoped<ISubjectRepository, SubjectService>();
