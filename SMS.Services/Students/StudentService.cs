@@ -31,5 +31,10 @@ namespace SMS.Services.Students
             return _context.Students.Find(student.Id);
 
         }
+
+        public void UpdateStudent(Student student)
+        {
+            _context.SaveChanges();
+        }
     }
 }

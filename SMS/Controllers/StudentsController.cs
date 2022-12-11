@@ -49,5 +49,22 @@ namespace SMS.Controllers
             var studentForReturn = _mapper.Map<StudentDto>(newStudent);
             return studentForReturn;
         }
+
+        [HttpPut]
+        public ActionResult UpdateStudent(int id, UpdateStudentDto student)
+        {
+            var updatingStudent = _studentService.GetOneStudent(id);
+
+            if (updatingStudent is null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(student, updatingStudent);
+
+            _studentService.UpdateStudent(updatingStudent);
+
+            return NoContent();
+        }
     }
 }

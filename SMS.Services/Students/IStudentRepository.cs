@@ -12,5 +12,6 @@ namespace SMS.Services.Students
         public List<Student> AllStudents();
         public Student GetOneStudent(int id);
         public Student AddNewStudent(Student student);
+        public void UpdateStudent(Student student);
     }
 }
