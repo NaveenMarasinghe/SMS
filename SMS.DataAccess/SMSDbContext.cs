@@ -14,6 +14,8 @@ namespace SMS.DataAccess
         public DbSet<Subject> Subjects { get; set; }    
         public DbSet<Grade> Grades { get; set; }
         public DbSet<SubjectEnroll> SubjectEnroll { get; set; }
+        public DbSet<SubjectMarks> SubjectMarks { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
