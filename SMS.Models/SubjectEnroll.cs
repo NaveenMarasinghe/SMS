@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SMS.Models
 {
-    public class SubjectEnroll
+    public class SubjectEnroll : AuditableEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
